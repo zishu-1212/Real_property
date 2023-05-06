@@ -1,0 +1,28 @@
+.colorChange{
+    background: white !important;
+    color: black !important;
+    width: max-content !important;
+    border-top-left-radius: 5px !important;
+    border-top-right-radius: 5px !important;
+}
+.tabpenalColor{
+    background-color: white !important;
+   
+}
+.tabcolorChange{
+    font-size: 16px !important;
+    font-weight: 500 !important;
+}
+.tabcolorChange:focus{
+    background-color: #1e3e74 !important;
+    color: white !important;
+}
+.btn-color{
+    background-color: #1e3e74 !important;
+    color: white !important;
+}
+.btn-color:hover{
+    background-color: #ffffff !important;
+    color: #1e3e74 !important;
+    border: 1px solid #1e3e74;
+}

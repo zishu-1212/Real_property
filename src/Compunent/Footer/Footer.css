@@ -1,0 +1,33 @@
+/* .link_hover a{
+    text-decoration: none !important;
+    color: rgb(255, 255, 255) !important;
+}
+.link_hover a:hover{
+    border-bottom: 1px solid rgb(255, 255, 255);
+    color: #1e3e74 !important;
+} */
+.cool-link {
+    display: inline-block;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width .8s;
+}
+
+.cool-link:hover::after {
+    width: 100%;
+    /* //transition: width .3s; */
+}
+.icon{
+    color: #a7a7a7d8;
+}
+.bgdark{
+    background-color: black !important;
+}

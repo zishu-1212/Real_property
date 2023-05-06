@@ -1,0 +1,53 @@
+.navlink_edit{
+    font-weight: 500 !important;
+    border-bottom: 2px solid transparent !important;
+    font-size: 19px !important;
+ color: #1e3e74 !important;
+}
+.navlink_edit:focus{
+    border-bottom: 2px solid #1e3e74 !important;
+color: white !important;
+
+}
+.navlink_edit:hover{
+border-bottom: 2px solid #1e3e74 !important;
+color: white !important;
+}
+.admin_page{
+    cursor: pointer !important;
+ color: #ffffff !important;
+
+}
+/* .active{
+    border-bottom:1px solid #ffffff;
+} */
+.admin_page:hover{
+    cursor: pointer !important;
+ color: #ffffff !important;
+
+}
+.navbar_position{
+    /* position:absolute !important; */
+     /* width: 100% !important; */
+     background-color: black !important;
+}
+.logoShap{
+    width: 100% !important;
+}
+.fit{
+    width: 12% !important;
+}
+@media only screen and (max-width:992px) {
+    .navbar_position{
+        position:static !important;
+      
+    } 
+    .logoShap{
+        width: 50% !important;
+    }
+    .fit{
+    
+    width: 50% !important;
+    }
+    
+}

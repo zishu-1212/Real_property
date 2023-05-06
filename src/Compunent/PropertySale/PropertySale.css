@@ -1,0 +1,19 @@
+.backgroundImage{
+    background: url(../../assets/property.jpg) ;
+    /* background-position: center !important; */
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    min-height: 900px;
+    background-attachment: fixed;
+/* opacity: 0.9; */
+}
+.padding-top{
+    padding-top: 20rem !important;
+    font-size: 63px !important;
+    color: #1e3e74!important;
+}
+.color_text{
+    color: #1e3e74!important;
+    font-size: 22px !important;
+    text-align: center !important;
+}

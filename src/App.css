@@ -1,0 +1,15 @@
+body{
+    font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Signika Negative', sans-serif;
+}
+.color-text{
+    color: rgb(120, 120, 120) !important;
+    font-size: 17px !important;
+}
+
+
+.border_welcome{
+    border: 1px solid #c9c9c9;
+    border-radius: 16px !important;
+}

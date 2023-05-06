@@ -1,0 +1,44 @@
+.list_hover:hover{
+background-color: rgb(242, 242, 242) !important;
+}
+.list_hover{
+    padding-left: 3rem !important;
+    cursor: pointer;
+    padding-top:1rem !important;
+    padding-bottom:1rem !important;
+    font-weight: 500 !important;
+    color: rgb(62, 62, 62) !important;
+}
+.go_to_main{
+    font-weight: 600 !important;
+    font-size: small !important;
+    border: none !important;
+    background-color: transparent !important;
+}
+
+.go_to_main {
+    display: inline-block;
+   
+    text-decoration: none;
+}
+
+.go_to_main::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #1e3e74;
+    transition: width .8s;
+}
+
+.go_to_main:hover::after {
+    width: 100%;
+    /* //transition: width .3s; */
+}
+.post_btn{
+    background: #1e3e74;
+    border: none !important;
+    font-weight: 600 !important;
+    font-size: small !important;
+    
+}
