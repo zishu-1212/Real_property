@@ -34,11 +34,18 @@ function AddProperty() {
       confirmPassword,
     });
   };
+  
+    const [selectedImage, setSelectedImage] = useState(null);
+  
+    const handleImageUpload = (event) => {
+      const file = event.target.files[0];
+      setSelectedImage(URL.createObjectURL(file));
+    }
   return (
     <>
       <h2 className="fw-bold">Add a Property</h2>
 
-      <div className="ps-1 ps-md-3">
+      <form className="ps-1 ps-md-3">
         <>
           <h4 className="mt-4">General Information :</h4>
           <p
@@ -129,7 +136,7 @@ function AddProperty() {
                 className="fw-bold mt-3 m-0  p-0 mb-1"
                 style={{ fontSize: "13px" }}
               >
-                Textarea
+                Discription
               </label>
               <textarea
                 className="form-control shadow-none w_50"
@@ -143,192 +150,71 @@ function AddProperty() {
 
         <hr />
         <>
-          <h4 className="mt-4">Property Images :</h4>
-          <div className="">
-            <span className="btn border ">Photos (0)</span>
-          </div>
-          <div className="text-center">
-            <input type="file" id="upload" hidden />
-            <label id="lable" for="upload">
-              Click for upload image
-            </label>
-          </div>
-        </>
+      <h4 className="mt-4">Property Images:</h4>
+      <div className="">
+        <span className="btn border">Photos (0)</span>
+      </div>
+      <div className="text-center">
+      {selectedImage && (
+        <div>
+         
+          <img src={selectedImage} alt="Selected" />
+        </div>
+      )}
+        <input type="file" id="upload" hidden onChange={handleImageUpload} />
+     
+        <label htmlFor="upload"  id="lable" className="mt-4">
+          Click to upload image
+        </label>
+      </div>
+    
+    </>
         <hr />
         <>
-          <form onSubmit={handleSubmit}>
+         
             <div
-              className="d-flex mt-4"
+              className=" mt-4"
               style={{ gap: "12px", flexWrap: "wrap" }}
             >
-              <h4 className="">Property Images :</h4>
-              <span
-                className="d-flex mt-1"
-                style={{ gap: "12px", flexWrap: "wrap" }}
-              >
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    value="showEmailPassword"
-                    checked={!showExtraFields}
-                    onChange={handleOptionChange}
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault1"
-                  />
-                  <label class="form-check-label" for="flexRadioDefault1">
-                    Default radio
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    value="showExtraFields"
-                    checked={showExtraFields}
-                    onChange={handleOptionChange}
-                    type="radio"
-                    name="flexRadioDefault"
-                    id="flexRadioDefault2"
-                  />
-                  <label class="form-check-labe2" for="flexRadioDefault2">
-                    Default radio
-                  </label>
-                </div>
-              </span>
-            </div>
-
-            <div>
+              <h4 className="">Own Detail :</h4>
+              <div className="mb-3">
               <label
-                className="fw-bold mt-3 m-0  p-0 mb-1"
+                htmlFor="exampleFormControlInput1"
+                className="fw-bold mt-3 m-0 p-0 mb-1"
                 style={{ fontSize: "13px" }}
               >
-                {" "}
-                Email:{" "}
+              Contact No
               </label>
-              <br />
-
               <input
-                className="w_50 shadow-none form-control"
-                type="email"
-                value={email}
-                onChange={handleEmailChange}
+                type="number"
+                className="shadow-none form-control w_50"
+                id="exampleFormControlInput1"
+                placeholder=""
               />
             </div>
-            <div>
+            <div className="mb-3">
               <label
-                className="fw-bold mt-3 m-0  p-0 mb-1"
+                htmlFor="exampleFormControlInput1"
+                className="fw-bold mt-3 m-0 p-0 mb-1"
                 style={{ fontSize: "13px" }}
               >
-                Password:{" "}
+                Address
               </label>
-              <br />
               <input
-                type="password"
-                value={password}
-                onChange={handlePasswordChange}
-                className="w_50 shadow-none form-control"
+                type="text"
+                className="shadow-none form-control w_50"
+                id="exampleFormControlInput1"
+                placeholder=""
               />
             </div>
-            {showExtraFields && (
-              <>
-                <div>
-                  <label
-                    className="fw-bold mt-3 m-0  p-0 mb-1"
-                    style={{ fontSize: "13px" }}
-                  >
-                    Full Name:{" "}
-                  </label>
-                  <br />
-                  <input
-                    type="text"
-                    className="w_50 shadow-none form-control"
-                  />
-                </div>
-                {/* <div>
-            <label>
-              Confirm Password: </label><br/>
-              <input
-                type="password"
-                value={confirmPassword}
-                onChange={handleConfirmPasswordChange}
-              />
-           
-          </div> */}
-
-                <div>
-                  <label
-                    className="fw-bold mt-3 m-0  p-0 mb-1"
-                    style={{ fontSize: "13px" }}
-                  >
-                    Phone Number:{" "}
-                  </label>
-                  <br />
-                  <input
-                    type="text"
-                    className="w_50 shadow-none form-control"
-                  />
-                </div>
-
-                <div className="d-flex mt-4" style={{ gap: "15px" }}>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      defaultValue=""
-                      id="flexCheckDefault1"
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor="flexCheckDefault1"
-                    >
-                      Individual
-                    </label>
-                  </div>
-                  <div className="form-check">
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      defaultValue=""
-                      id="flexCheckChecked2"
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor="flexCheckChecked2"
-                    >
-                      Agent
-                    </label>
-                  </div>
-                </div>
-
-                <div className="">
-                  <div
-                    className="form-check d-flex justify-content-center"
-                    style={{ gap: "8px" }}
-                  >
-                    <input
-                      className="form-check-input"
-                      type="checkbox"
-                      defaultValue=""
-                      id="flexCheckChecked4"
-                    />
-                    <label
-                      className="form-check-label"
-                      htmlFor="flexCheckChecked4"
-                    >
-                      By logging in, you agree to realproperty terms & conditons
-                    </label>
-                  </div>
-                </div>
-              </>
-            )}
-            <div>
+        
               <button className="mt-3 btn btn-color float-end" type="submit">
                 Submit
               </button>
             </div>
-          </form>
+         
         </>
-      </div>
+      </form>
     </>
   );
 }

@@ -65,6 +65,55 @@ function CardCompount() {
       roomDetail:
         "House for rent 3 marla lower portion (ground floor) furnished 2 bedrooms 1",
     },
+    {
+      img: "assets/images house.jpeg",
+      price: "2.35 Lac",
+      place: "Johar Town, Lahore",
+      marla:
+        "1 kanal double story house for rent in johar town best for silent office",
+      roomDetail:
+        "6 beds with attached washrooms double tv lounge drawing dining double",
+    },
+    {
+      img: "assets/This.webp",
+      price: "13,000.00",
+      place: "Sher Shah Colony, Lahore",
+      marla: "House for rent - 3 marla ground floor",
+      roomDetail:
+        "House for rent 3 marla lower portion (ground floor) furnished 2 bedrooms 1",
+    },
+    {
+      img: "assets/Rawson.jpg",
+      price: " 1.10 Lac",
+      place: "Bahria Town - Jasmine Block, Bahria Town - Sector C",
+      marla: "10 marla brand new luxury house for rent at reasonable demand",
+      roomDetail:
+        "10 marla brand new luxury house for rent 5 bed room with attach bath dri",
+    },
+    {
+      img: "assets/property.jpg",
+      price: "90,000.00",
+      place: "Askari - 10",
+      marla: "House for rent askari x 617 c lahore",
+      roomDetail:
+        "House is available for rent at following detail askari x 617 c lahore rent 90",
+    },
+    {
+      img: "assets/modern.jpg",
+      price: " 1.10 Lac",
+      place: "Bahria Town - Jasmine Block, Bahria Town - Sector C",
+      marla: "10 marla brand new luxury house for rent at reasonable demand",
+      roomDetail:
+        "10 marla brand new luxury house for rent 5 bed room with attach bath dri",
+    },
+    {
+      img: "assets/corrected.jpg",
+      price: "13,000.00",
+      place: "Sher Shah Colony, Lahore",
+      marla: "House for rent - 3 marla ground floor",
+      roomDetail:
+        "House for rent 3 marla lower portion (ground floor) furnished 2 bedrooms 1",
+    },
   ];
   return (
     <>
@@ -157,55 +206,7 @@ function CardCompount() {
         <button className="btn outline_dark h-50">Lahore Warehouses on Rent</button>
       </div>
 
-      {/* <div className="row ">
-        <div className="col-md-3  ">
-          <div
-            className=" d-flex "
-            style={{ gap:"12px" }}
-          >
-            <span className="border_icon p-1">
-              
-              <AiOutlineAppstore className="fs-2  " />
-            </span>
-            <span className="border_icon p-1 px-2">
-              <AiOutlineBars className="fs-3 pt-1 " />
-            </span>
-          </div>
-        </div>
-        <div className="col-md-3 ">
-          
-          <p>1 - 20 of 399 Warehouses</p>
-        </div>
-        <div class="dropdown col-md-2">
-          <button
-            className="btn outline_dark shadow-none dropdown-toggle"
-            type="button"
-            id="dropdownMenuButton1"
-            data-bs-toggle="dropdown"
-            aria-expanded="false"
-          >
-           Most Resent
-          </button>
-          <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li>
-              <a className="dropdown-item" href="#">
-              Most Resent
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-              Hightest Price 
-              </a>
-            </li>
-            <li>
-              <a className="dropdown-item" href="#">
-                Lowest Price
-              </a>
-            </li>
-          </ul>
-        </div>
-        
-      </div> */}
+      
 
       <div className="row d-flex  ">
 
@@ -258,12 +259,13 @@ function CardCompount() {
           </ul>
         </div>
         </div>
-          {card.map((items, i) => (
-            <div>
+          {card.map((items, i ) => (
+            <div key={i}>
               <div
                 style={{ borderRadius: "7px" }}
                 className="card card_shadow  mt-3"
               >
+               
                 <div className="d-md-flex d-block ">
                   <div className="p-2 array_data">
                     <img src={items.img} alt="" />

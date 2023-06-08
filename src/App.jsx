@@ -18,9 +18,9 @@ function App() {
   <Route exact  path='/' element={<Buy/>}/>
   <Route exact  path='/Rent' element={<Rent/>}/>
   <Route exact  path='/CardCompount' element={<CardCompount/>}/>
-  <Route exact  path='/AdminDashdord' element={<AdminDashdord/>}/>
+  <Route exact  path='/AddDashboard' element={<AdminDashdord/>}/>
 
-  <Route exact  path='/AddDashboard' element={<AddDashboard/>}/>
+  <Route exact  path='/PropertiesDashdord' element={<AddDashboard/>}/>
     
 
   

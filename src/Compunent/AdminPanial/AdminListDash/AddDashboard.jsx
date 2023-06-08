@@ -46,16 +46,16 @@ function ResponsiveDrawer(props) {
     <Link to="/">  <img src={marhaba} width="100" alt="" /> </Link>
       <Divider />
       <div className=" mt-4 ">
-     <Link to="/AddDashboard"className='text-decoration-none'> <List className='list_hover'>
+      <List className='list_hover'>
     <DashboardIcon className='fs-5'/> Dashboard
-      </List></Link>
+      </List>
       <List className='list_hover'>
    <MailOutlineIcon className='fs-5'/> Massages
       </List>
-      <List className='list_hover'>
+      <Link to="/PropertiesDashdord"className='text-decoration-none'><List className='list_hover'>
    <AssuredWorkloadIcon className='fs-5'/> My Properties
-      </List>
-      <Link to="/AdminDashdord"className='text-decoration-none'><List className='list_hover'>
+      </List></Link>
+      <Link to="/AddDashboard"className='text-decoration-none'><List className='list_hover'>
    <AddCircleIcon className='fs-5'/> Add Properties
       </List></Link>
     <List className='list_hover'>
